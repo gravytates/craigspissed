@@ -14,6 +14,7 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { NewPostComponent } from './new-post/new-post.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -31,7 +32,8 @@ export const firebaseConfig = {
     JobsComponent,
     PersonalsComponent,
     BitchComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    NewPostComponent
   ],
   imports: [
     BrowserModule,

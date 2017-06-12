@@ -1,0 +1,25 @@
+<div class="form-group">
+  <label>Title:</label>
+  <input class="form-control" #newTitle>
+</div>
+<div class="form-group">
+  <select class="form-control" #newCategory>
+    <option>For Sale</option>
+    <option>Jobs</option>
+    <option>Personals</option>
+    <option>Complaints</option>
+  </select>
+</div>
+<div class="form-group">
+  <label>Post Body:</label>
+  <input class="form-control" #newBody>
+</div>
+<div class="form-group">
+  <label>Author:</label>
+  <input class="form-control" #newAuthor>
+</div>
+<div class="form-group">
+  <label>Contact:</label>
+  <input class="form-control" #newContact>
+</div>
+<button class="btn" (click)="submitForm(newTitle.value, newCategory.value, newBody.value, newAuthor.value, newContact.value); newTitle.value=''; newCategory.value=''; newBody.value=''; newAuthor.value=''; newContact.value='';">Add Post</button>

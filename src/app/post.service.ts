@@ -10,6 +10,10 @@ export class PostService {
     this.masterPersonalsList = database.list('posts');
   }
 
+  addPost(newPost: Post) {
+    this.masterPersonalsList.push(newPost);
+  }
+
   getPosts() {
     return this.masterPersonalsList;
   }
