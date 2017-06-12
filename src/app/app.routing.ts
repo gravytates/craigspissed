@@ -5,6 +5,7 @@ import { ForSaleComponent } from './for-sale/for-sale.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { PersonalsComponent } from './personals/personals.component';
 import { BitchComponent } from './bitch/bitch.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -26,6 +27,10 @@ const appRoutes: Routes = [
   {
     path: 'bitch',
     component: BitchComponent
+  },
+  {
+    path: 'posts/:id',
+    component: PostDetailComponent
   }
 ];
 

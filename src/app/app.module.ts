@@ -10,6 +10,18 @@ import { ForSaleComponent } from './for-sale/for-sale.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { PersonalsComponent } from './personals/personals.component';
 import { BitchComponent } from './bitch/bitch.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
+import { masterFirebaseConfig } from './api-keys';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
+};
+
 
 @NgModule({
   declarations: [
@@ -18,13 +30,16 @@ import { BitchComponent } from './bitch/bitch.component';
     ForSaleComponent,
     JobsComponent,
     PersonalsComponent,
-    BitchComponent
+    BitchComponent,
+    PostDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
