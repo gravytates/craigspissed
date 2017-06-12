@@ -20,8 +20,8 @@ export class PersonalsComponent implements OnInit {
   }
 
 
-  goToDetailPage(clickedPost: Post) {
-    this.router.navigate(['posts', clickedPost.id]);
+  goToDetailPage(clickedPost) {
+    this.router.navigate(['posts', clickedPost.$key]);
   };
 
 }
