@@ -1,7 +1,3 @@
-<p>
-  personals works!
-  here's some objects:
-</p>
-<div *ngFor='let currentPersonal of masterPersonalsList | async' (click)="goToDetailPage(currentPersonal)">
-  <p>{{currentPersonal.title}}</p>
+<div *ngFor='let currentPersonal of masterPersonalsList | async | categories:filterBy' (click)="goToDetailPage(currentPersonal)">
+  <p>{{(currentPersonal)?.title}}</p>
 </div>

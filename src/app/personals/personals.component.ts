@@ -19,6 +19,8 @@ export class PersonalsComponent implements OnInit {
     this.masterPersonalsList = this.postService.getPosts();
   }
 
+  filterBy: string = "personals";
+
 
   goToDetailPage(clickedPost) {
     this.router.navigate(['posts', clickedPost.$key]);

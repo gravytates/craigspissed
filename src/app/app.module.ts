@@ -15,6 +15,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { NewPostComponent } from './new-post/new-post.component';
+import { CategoriesPipe } from './categories.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -33,7 +34,8 @@ export const firebaseConfig = {
     PersonalsComponent,
     BitchComponent,
     PostDetailComponent,
-    NewPostComponent
+    NewPostComponent,
+    CategoriesPipe
   ],
   imports: [
     BrowserModule,
